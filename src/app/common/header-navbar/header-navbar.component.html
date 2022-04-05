@@ -1,0 +1,61 @@
+<!-- <div class="container">
+    <mat-toolbar color="primary">        
+        <mat-form-field appearance="fill">
+            <mat-label>Input</mat-label>
+            <input matInput name="search" id="search" (input)="searchValue($event.target)">
+        </mat-form-field>
+        <button mat-button color="Second">{{button}}</button>
+    </mat-toolbar>
+</div> -->
+
+<mat-toolbar fxLayout="row" color="primary">
+    <span fxFlex="10" fxLayoutAlign="center center">Logo</span>
+    <div fxFlex="30" fxLayoutAlign="star center">        
+        <button mat-button><mat-icon class="mr">supervisor_account</mat-icon></button>        
+        <button mat-button>0.00 Pts.</button>
+    </div>
+    <div fxFlex="20" style="text-align: center;">
+        <mat-form-field appearance="standard" class="search-input">            
+            <input type="search" matInput name="search" id="search" (input)="searchValue($event.target)" placeholder="search" autocomplete="off" mat-button [matMenuTriggerFor]="animals">
+            <mat-icon matSuffix>search</mat-icon>
+            <mat-menu #animals="matMenu">
+                <button *ngFor="let itemList of button" mat-menu-item>{{itemList}}</button>                
+            </mat-menu>              
+        </mat-form-field>
+        <button mat-button [matMenuTriggerFor]="menu">
+            <mat-icon class="mr">filter_list</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-button matTooltip="Publicaciones" style="color: #2196f3;"><mat-icon class="mr">assignment_ind</mat-icon></button>
+            <button mat-button matTooltip="Usuarios" style="color: #2196f3;"><mat-icon class="mr">supervised_user_circle</mat-icon></button>
+            <button mat-button matTooltip="Ofertas de trabajo" style="color: #2196f3;"><mat-icon class="mr">work</mat-icon></button>
+        </mat-menu>
+    </div>
+    <div fxFlex="40" style="text-align: end;">
+        <button mat-button *ngFor="let item of menuItems" 
+            [fxShow]="item.showOnDesktop" 
+            [fxShow.xs]="item.showOnMobile"
+            [fxShow.sm]="item.showOnTablet">
+            <mat-icon class="mr">{{item.icon}}</mat-icon>
+            {{item.label}}
+        </button>
+        <ng-container>
+            <button mat-icon-button [matMenuTriggerFor]="dropMenu">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #dropMenu="matMenu">
+                <ng-container *ngFor="let item of menuItems">
+                    <div [fxShow]="!item.showOnDesktop" 
+                        [fxShow.sm]="!item.showOnTablet" 
+                        [fxShow.xs]="!item.showOnMobile">
+                        <button mat-menu-item>
+                            <mat-icon class="mr">{{item.icon}}</mat-icon>
+                            {{item.label}}
+                        </button>
+                        <mat-divider></mat-divider>
+                    </div>
+                </ng-container>
+            </mat-menu>
+        </ng-container>
+    </div>
+</mat-toolbar>

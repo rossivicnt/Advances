@@ -1,0 +1,31 @@
+.grid-space{
+    margin: auto;
+    padding: 1%!important;
+}
+.card {
+    padding: 5%;
+    margin-top: 5px;
+    margin-bottom: 5px;    
+}
+.card div img{
+    width: auto;
+    height: 200px;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+.mat-toolbar {
+    background: white;
+}
+
+.mat-toolbar-row button{
+    text-align: center;
+}
+
+.mat-card-content{
+    margin: 0px;
+}
+
+.mat-card-content p {
+    text-align: justify;
+}

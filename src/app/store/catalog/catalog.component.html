@@ -1,0 +1,57 @@
+
+<div >    
+  <section >
+    <div fxLayout="row wrap-reverse" fxLayoutAlign="space-between start" class="container" fxLayoutGap="3% grid">        
+      <div *ngFor="let product of productos; index as i;" fxFlex.xs="100%" fxFlex.lg="30%" fxFlex="48%" class="grid-space">
+        <mat-card class="card">
+          <div style="overflow: hidden;">
+            <img mat-card-image src="{{product.photo}}" alt="{{product.name}}">
+          </div>
+          <mat-card-header>
+            <div mat-card-avatar class="header-image" style="background-image: url({{product.photo}}); background-size: cover;" fxFlex="10"></div>
+            <div fxFlex>
+            <mat-card-title>Usuario {{i}}</mat-card-title>
+            <mat-card-subtitle>{{product.name}}</mat-card-subtitle>
+            </div>
+            <p style="text-align: right;" fxFlex>{{Date}}</p>
+          </mat-card-header>                
+          <mat-card-content>                  
+            <div fxLayout="column">
+              <div fxFlex>
+                <!-- <h2>Description</h2> -->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, ipsa omnis repellendus sapiente neque saepe et dolores nulla ut accusamus rerum fuga enim vel minima quasi fugiat voluptate dolorem quo.</p>
+              </div>
+              <!-- <h2>Price</h2> -->
+              <div fxFlex *ngIf="product.sell">${{product.price}}</div>
+              <div fxFlex *ngIf="product.job">03/04/2022 to 03/05/2022</div>
+              <div fxFlex *ngIf="product.treding">Contact us: user@mail.com</div>
+            </div>
+          </mat-card-content>
+          <mat-card-actions>
+            <mat-toolbar color="white">
+              <mat-toolbar-row>                            
+                <button mat-menu-item>
+                    <mat-icon class="mr">search</mat-icon>                                    
+                </button>                                
+                <button mat-menu-item>
+                  <mat-icon class="mr">favorite</mat-icon>
+                </button>                                
+                <button mat-menu-item *ngIf="product.sell">
+                  <mat-icon class="mr">shopping_cart</mat-icon>                                    
+                </button>
+                <button mat-menu-item *ngIf="product.job">
+                  <mat-icon class="mr">share</mat-icon>                                    
+                </button>
+                <button mat-menu-item *ngIf="product.treding">
+                  <mat-icon class="mr">location_on</mat-icon>
+                </button>
+              </mat-toolbar-row>
+            </mat-toolbar>
+          </mat-card-actions>                  
+        </mat-card>
+      </div>
+    </div>
+  </section>
+</div>
+  <!-- MODAL PRODUCTO INDIVIDUAL -->
+  <!-- <app-modal-producto [id]="id"></app-modal-producto> -->
