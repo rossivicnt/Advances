@@ -16,20 +16,19 @@
     </div>
     <div fxFlex="20" style="text-align: center;">
         <mat-form-field appearance="standard" class="search-input">            
-            <input type="search" matInput name="search" id="search" (input)="searchValue($event.target)" placeholder="search" autocomplete="off" mat-button [matMenuTriggerFor]="animals">
+            <input type="search" matInput name="search" id="search" (input)="searchValue($event.target)" placeholder="search" autocomplete="off" mat-button [matMenuTriggerFor]="itemList">
             <mat-icon matSuffix>search</mat-icon>
-            <mat-menu #animals="matMenu">
-                <button *ngFor="let itemList of button" mat-menu-item>{{itemList}}</button>                
-            </mat-menu>              
+            <mat-menu #itemList="matMenu">
+                <button *ngFor="let itemList of button" mat-menu-item>{{itemList}}</button>
+            </mat-menu>
         </mat-form-field>
         <button mat-button [matMenuTriggerFor]="menu">
             <mat-icon class="mr">filter_list</mat-icon>
         </button>
-        <mat-menu #menu="matMenu">
-            <button mat-button matTooltip="Publicaciones" style="color: #2196f3;"><mat-icon class="mr">assignment_ind</mat-icon></button>
-            <button mat-button matTooltip="Usuarios" style="color: #2196f3;"><mat-icon class="mr">supervised_user_circle</mat-icon></button>
-            <button mat-button matTooltip="Ofertas de trabajo" style="color: #2196f3;"><mat-icon class="mr">work</mat-icon></button>
-        </mat-menu>
+        <button mat-button [matMenuTriggerFor]="language">
+            <mat-icon class="mr">list</mat-icon>Español
+        </button>
+        
     </div>
     <div fxFlex="40" style="text-align: end;">
         <button mat-button *ngFor="let item of menuItems" 
@@ -59,3 +58,15 @@
         </ng-container>
     </div>
 </mat-toolbar>
+
+<mat-menu #menu="matMenu">
+    <button mat-button matTooltip="Publicaciones" style="color: #2196f3;"><mat-icon class="mr">assignment_ind</mat-icon></button>
+    <button mat-button matTooltip="Usuarios" style="color: #2196f3;"><mat-icon class="mr">supervised_user_circle</mat-icon></button>
+    <button mat-button matTooltip="Ofertas de trabajo" style="color: #2196f3;"><mat-icon class="mr">work</mat-icon></button>
+</mat-menu>
+<mat-menu #language="matMenu">
+    <ul>
+        <li>Español</li>
+        <li>Inglés</li>
+    </ul>
+</mat-menu>
