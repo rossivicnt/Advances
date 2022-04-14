@@ -42,14 +42,14 @@ export class HeaderNavbarComponent implements OnInit {
       label: 'About',
       icon: 'help',
       showOnMobile: false,
-      showOnTablet: true,
-      showOnDesktop: true
+      showOnTablet: false,
+      showOnDesktop: false
     },
     {
       label: 'Sign Up',
       icon: 'login',
-      showOnMobile: true,
-      showOnTablet: true,
+      showOnMobile: false,
+      showOnTablet: false,
       showOnDesktop: true
     },
     {
