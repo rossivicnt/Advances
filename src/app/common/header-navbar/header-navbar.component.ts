@@ -43,28 +43,36 @@ export class HeaderNavbarComponent implements OnInit {
       icon: 'help',
       showOnMobile: false,
       showOnTablet: false,
-      showOnDesktop: false
+      showOnDesktop: false,
+      href: '',
+      redirect: false
     },
     {
       label: 'Sign Up',
       icon: 'login',
       showOnMobile: false,
       showOnTablet: false,
-      showOnDesktop: true
+      showOnDesktop: true,
+      href: '/access/login',
+      redirect: true
     },
     {
       label: 'Showcase',
       icon: 'slideshow',
       showOnMobile: false,
       showOnTablet: false,
-      showOnDesktop: false
+      showOnDesktop: false,
+      href: '',
+      redirect: false
     },
     {
       label: 'Blog',
       icon: 'rss_feed',
       showOnMobile: false,
       showOnTablet: false,
-      showOnDesktop: false
+      showOnDesktop: false,
+      href: '',
+      redirect: false
     },
   ];
 

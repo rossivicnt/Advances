@@ -9,6 +9,8 @@ export class RegisterComponent implements OnInit {
 
   constructor() { }
 
+  hide = true;
+
   ngOnInit(): void {
   }
 

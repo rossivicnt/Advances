@@ -9,10 +9,14 @@
 </div> -->
 
 <mat-toolbar fxLayout.gt-sm="row" color="primary" fxShow.gt-sm=true fxShow="false">
-    <span fxFlex="10" fxLayoutAlign="center center">Logo</span>
+    <span fxFlex="10" fxLayoutAlign="center center">
+        <a href="">
+            <img src="../../../assets/images/logo_blanco.png" class="logo">
+        </a>
+    </span>
     <div fxFlex="30" fxLayoutAlign="star center">
-        <button mat-button><mat-icon class="mr">supervisor_account</mat-icon></button>        
-        <button mat-button>0.00 Pts.</button>
+        <button mat-button matTooltip="Referidos"><mat-icon class="mr">supervisor_account</mat-icon></button>        
+        <button mat-button matTooltip="Cartera">0.00 Pts.</button>
     </div>
     <div fxFlex="20" style="text-align: center;">
         <mat-form-field appearance="standard" class="search-input">            
@@ -34,7 +38,8 @@
         <button mat-button *ngFor="let item of menuItems" 
             [fxShow]="item.showOnDesktop" 
             [fxShow.xs]="item.showOnMobile"
-            [fxShow.sm]="item.showOnTablet">
+            [fxShow.sm]="item.showOnTablet"
+            [routerLink]="[item.href]">
             <mat-icon class="mr">{{item.icon}}</mat-icon>
             {{item.label}}
         </button>

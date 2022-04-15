@@ -15,6 +15,7 @@ import { MatMenuModule } from "@angular/material/menu";
 import { MatIconModule } from "@angular/material/icon";
 import { MatDividerModule } from "@angular/material/divider";
 import { MatCardModule } from "@angular/material/card";
+import {MatDialogModule} from '@angular/material/dialog';
 import { MatGridListModule } from "@angular/material/grid-list";
 import { FlexLayoutModule, FlexModule, GridModule } from '@angular/flex-layout';
 
@@ -37,7 +38,8 @@ import { FlexLayoutModule, FlexModule, GridModule } from '@angular/flex-layout';
     MatMenuModule,
     MatDividerModule,
     MatCardModule,
-    MatIconModule,    
+    MatIconModule,
+    MatDialogModule,
     FlexLayoutModule,
     FlexModule,
     GridModule,

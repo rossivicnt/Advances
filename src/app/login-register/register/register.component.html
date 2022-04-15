@@ -1,1 +1,57 @@
-<p>register works!</p>
+<h2 mat-dialog-title>Registro</h2>
+<mat-dialog-content class="mat-typography">    
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro reprehenderit quo similique atque alias necessitatibus consequuntur non ab esse voluptatibus, impedit repellat eligendi, voluptate repudiandae officiis blanditiis ipsum nam neque.</p>
+    <div fxLayout.gt-xs="row" fxlayout.xs="column" fxLayoutAlign.gt-xs="space-around center" fxLayoutAlign.xs="space-between center" >
+        <div fxFlex.gt-xs="48" fxFlex.xs="100">
+            <div fxLayout="column" fxLayoutAlign="space-between center">
+                <div fxFlex class="stretch">
+                    <mat-form-field appearance="standard" class="stretch">
+                        <mat-label><mat-icon class="mr">person</mat-icon>&nbsp;Nombre</mat-label>
+                        <input matInput type="text">
+                    </mat-form-field>
+                </div>
+                <div fxFlex class="stretch">
+                    <mat-form-field appearance="standard" class="stretch">
+                        <mat-label><mat-icon class="mr">person</mat-icon>&nbsp;Apellido</mat-label>
+                        <input matInput type="text">
+                    </mat-form-field>
+                </div>
+                <div fxFlex class="stretch">
+                    <mat-form-field appearance="standard" class="stretch">
+                        <mat-label><mat-icon class="mr">stay_current_portrait</mat-icon>&nbsp;Teléfono</mat-label>
+                        <input matInput type="text">
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+        <div fxFlex.gt-xs="48" fxFlex.xs="100">
+            <div fxLayout="column" fxLayoutAlign="space-between center" >
+                <div fxFlex class="stretch">
+                    <mat-form-field appearance="standard" class="stretch">
+                        <mat-label><mat-icon class="mr">add_location</mat-icon>&nbsp;Dirección</mat-label>
+                        <input matInput type="text">
+                    </mat-form-field>
+                </div>
+                <div fxFlex class="stretch">
+                    <mat-form-field appearance="standard" class="stretch">
+                        <mat-label><mat-icon class="mr">email</mat-icon>&nbsp;Correo</mat-label>
+                        <input matInput type="text">
+                    </mat-form-field>
+                </div>
+                <div fxFlex class="stretch">
+                    <mat-form-field appearance="standard" class="stretch">
+                        <mat-label><mat-icon class="mr">lock</mat-icon>&nbsp;Contraseña</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'">
+                        <span mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" class="iconButton">
+                            <mat-icon class="mr">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </span>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" color="primary" cdkFocusInitial>Registrar</button>
+</mat-dialog-actions>
