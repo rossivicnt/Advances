@@ -1,0 +1,54 @@
+.full-width{
+    width: 100%;
+}
+
+.card {
+    padding: 5%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.iconButton {
+    cursor: pointer;
+}
+
+.btn {
+    background-color: #2d8cff;
+    color: white;
+    width: -webkit-fill-available;
+}
+
+#register{
+    width: -webkit-fill-available;
+    border-color: #2196f3;
+}
+
+.image .mat-card-image{
+    width: auto;
+    height: 250px;
+    border-radius: 100%;
+}
+
+.title-header {
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.form{    
+    padding-bottom: 25px;
+}
+
+.view-component {
+    height: calc(100% - 10%);
+}
+.view-component .view-img{    
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 10%);
+    background-image: url("../../../assets/images/analytics.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(2px);
+    background-position: center center;
+    z-index: 0;
+}

@@ -21,13 +21,15 @@ import { StoreModule } from './store/store.module';
 import { HeaderNavbarComponent } from './common/header-navbar/header-navbar.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { FlexLayoutModule, FlexModule, GridModule } from '@angular/flex-layout';
+import { LoginRegisterComponent } from './login-register/login-register.component';
 
 @NgModule({
   declarations: [
     AppComponent, 
     StoreComponent,
     HeaderNavbarComponent,
-    FooterComponent
+    FooterComponent,
+    LoginRegisterComponent
   ],
   imports: [
     BrowserModule,

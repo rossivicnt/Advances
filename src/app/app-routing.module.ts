@@ -3,7 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { StoreModule } from './store/store.module';
 
 const routes: Routes = [  
-  { path: 'user-profile', loadChildren: () => import('./user-profile/user-profile.module').then(m => m.UserProfileModule) },
+  { path: '', loadChildren: () => import('./store/store.module').then(m => m.StoreModule) },
+  { path: 'user', loadChildren: () => import('./user-profile/user-profile.module').then(m => m.UserProfileModule) },
+  { path: 'access', loadChildren: () => import('./login-register/login-register.module').then(m => m.LoginRegisterModule) },
   { path: '**', loadChildren: () => import('./store/store.module').then(m => m.StoreModule) }
 ];
 

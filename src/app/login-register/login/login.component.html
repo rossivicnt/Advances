@@ -1,0 +1,47 @@
+<div fxLayoutAlign="center stretch" class="view-component">
+    <div class="view-img"></div>
+    <div class="container">
+        <mat-card class="card">
+            <div fxLayout="row" fxLayoutAlign="space-evenly stretch">
+                <div fxFlex="60">                
+                    <div fxLayout="column" fxLayoutAlign="center center">
+                        <div fxFlex class="image">
+                            <img mat-card-image src="../../../assets/images/logo_color.jpeg">
+                        </div>
+                        <div class="title-header" fxFlex>
+                            <h2>El placer de colaborar, y aumentar su seguridad, satisfacción y progreso.</h2>
+                        </div>                
+                    </div>                
+                </div>
+                <div fxFlex="30" style="margin-bottom: auto; margin-top: auto;">                
+                    <div class="container-row">
+                        <div class="form">
+                                <div fxLayout="column">
+                                    <div fxFlex>
+                                        <mat-form-field appearance="standard" class="full-width">
+                                            <mat-label><mat-icon class="mr">person</mat-icon>&nbsp;Usuario, correo o número telefónico</mat-label>
+                                            <input matInput type="text">
+                                        </mat-form-field>
+                                    </div>
+                                    <div fxFlex>
+                                        <mat-form-field appearance="standard" class="full-width">
+                                            <mat-label><mat-icon class="mr">lock</mat-icon>&nbsp;Contraseña</mat-label>
+                                            <input matInput [type]="hide ? 'password' : 'text'">
+                                            <span mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" class="iconButton">
+                                                <mat-icon class="mr">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                            </span>
+                                        </mat-form-field>                            
+                                    </div>
+                                    <div fxFlex>                            
+                                        <mat-checkbox>Recuérdame</mat-checkbox>
+                                        <button mat-button class="btn" id="login">Iniciar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        <button mat-stroked-button color="primary" id="register">Registrarse</button>                        
+                    </div>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+</div>
