@@ -74,6 +74,15 @@ export class HeaderNavbarComponent implements OnInit {
       href: '',
       redirect: false
     },
+    {
+      label: 'Profile',
+      icon: 'account_box',
+      showOnMobile: false,
+      showOnTablet: false,
+      showOnDesktop: false,
+      href: '/user/account',
+      redirect: true
+    }
   ];
 
   ngOnInit(): void {

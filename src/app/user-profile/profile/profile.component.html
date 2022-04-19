@@ -1,0 +1,217 @@
+<div class="container-row">
+    <mat-card>        
+        <div>
+            <mat-card-title>
+                <h1>Perfil</h1>
+            </mat-card-title>
+            <mat-card-content>
+                <div fxLayout.gt-sm="row" 
+                    fxLayout="column" 
+                    fxLayoutAlign.gt-xs="space-evenly center"
+                    fxLayoutAlign="space-around center">
+                    <div fxFlex.gt-sm="40%" fxFlex="100" class="profile-image">
+                        <div class="container-img" [ngStyle]="{'background-image': 'url('+(photoProfile)+')'}">            
+                        </div>
+                        <mat-form-field appearance="standard">
+                            <ngx-mat-file-input type="file" [formControl]="fileControl" [multiple]="optionsFile.multiple" [accept]="optionsFile.accept" color="primary"></ngx-mat-file-input>
+                        </mat-form-field>
+                        <!-- <div>
+                            <mat-radio-group [(ngModel)]="optionsFile.multiple">                    
+                                <mat-radio-button class="margin" value="after">Múltiple</mat-radio-button>
+                                <mat-radio-button class="margin" value="before">Individual</mat-radio-button>
+                            </mat-radio-group>
+                        </div> -->
+                    </div>
+                    <div fxFlex.gt-sm="auto" fxFlex="100">                        
+                        <mat-tab-group>
+                            <mat-tab label="General">
+                                <header><h2>Información general</h2></header>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat nulla doloremque, culpa optio maxime perspiciatis velit repellat sint accusantium natus accusamus quia voluptas quibusdam dolorum cum, a, voluptatibus earum at.</p>
+                                <form novalidate 
+                                    fxLayout.gt-sm="row"
+                                    fxLayout="column" 
+                                    fxLayoutAlign="space-around center">
+                                    <div fxFlex.gt-sm="48" fxFlex="100">                                        
+                                        <mat-form-field appearance="standard" class="form-field">
+                                            <mat-label><mat-icon class="mr">person</mat-icon>&nbsp;Nombre</mat-label>
+                                            <input type="text" autocomplete="off" matInput class="form-control" name="name" ngModel>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="standard" class="form-field">
+                                            <mat-label><mat-icon class="mr">person_outline</mat-icon>&nbsp;Apellido</mat-label>
+                                            <input type="text" autocomplete="off" matInput class="form-control" name="lastName" ngModel>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="standard" class="form-field">
+                                            <mat-label><mat-icon class="mr">phone</mat-icon>&nbsp;Teléfono</mat-label>
+                                            <input type="text" autocomplete="off" matInput class="form-control" name="phone" ngModel>
+                                        </mat-form-field>
+                                    </div>
+                                    <div fxFlex.gt-sm="48" fxFlex="100">
+                                        <mat-form-field appearance="standard" class="form-field">
+                                            <mat-label><mat-icon class="mr">location_on</mat-icon>&nbsp;Dirección</mat-label>
+                                            <input type="text" autocomplete="off" matInput class="form-control" name="location" ngModel>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="standard" class="form-field">
+                                            <mat-label><mat-icon class="mr">email</mat-icon>&nbsp;Correo electrónico</mat-label>
+                                            <input type="text" autocomplete="off" matInput class="form-control" name="email" ngModel>
+                                        </mat-form-field>  
+                                        <mat-form-field appearance="standard" class="form-field">
+                                            <mat-label><mat-icon class="mr">contacts</mat-icon>&nbsp;Nombre de usuario</mat-label>
+                                            <input type="text" autocomplete="off" matInput class="form-control" name="userName" ngModel>
+                                        </mat-form-field>
+                                    </div>
+                                </form>
+                            </mat-tab>
+                            <mat-tab label="Seguridad">
+                                <header><h2>Configuración de seguridad</h2></header>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat nulla doloremque, culpa optio maxime perspiciatis velit repellat sint accusantium natus accusamus quia voluptas quibusdam dolorum cum, a, voluptatibus earum at.</p>
+                                <form novalidate 
+                                    fxLayout.gt-sm="row"
+                                    fxLayout="column" 
+                                    fxLayoutAlign="space-around center">
+                                    <div fxFlex.gt-sm="48" fxFlex="100">
+                                        <mat-form-field appearance="standard" class="form-field">
+                                            <mat-label><mat-icon class="mr">email</mat-icon>&nbsp;Confirmar correo</mat-label>
+                                            <input type="text" autocomplete="off" matInput class="form-control" name="sname" ngModel>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="standard" class="form-field">
+                                            <mat-label><mat-icon class="mr">phone</mat-icon>&nbsp;Verificar teléfono</mat-label>
+                                            <input type="text" autocomplete="off" matInput class="form-control" name="security_phone" ngModel>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="standard" class="form-field">
+                                            <mat-label><mat-icon class="mr">lock</mat-icon>&nbsp;Nueva contraseña</mat-label>
+                                            <input type="text" autocomplete="off" matInput class="form-control" name="security_password" ngModel>
+                                        </mat-form-field>                                        
+                                    </div>
+                                    <div fxFlex.gt-sm="48" fxFlex="100">
+                                        <header><h3>Recomendaciones de seguridad</h3></header>
+                                        <mat-list role="list" [ngStyle]="{'text-align':'center'}">
+                                            <mat-list-item role="listitem">Recomendación 1</mat-list-item>
+                                            <mat-list-item role="listitem">Recomendación 2</mat-list-item>
+                                            <mat-list-item role="listitem">Recomendación 3</mat-list-item>
+                                        </mat-list>
+                                    </div>
+                                </form>
+                            </mat-tab>
+                            <mat-tab label="Empresa">
+                                <header><h2>Datos de empresa</h2></header>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat nulla doloremque, culpa optio maxime perspiciatis velit repellat sint accusantium natus accusamus quia voluptas quibusdam dolorum cum, a, voluptatibus earum at.</p>
+                                <form novalidate 
+                                    fxLayout.gt-sm="row"
+                                    fxLayout="column" 
+                                    fxLayoutAlign="space-around center">
+                                    <div fxFlex.gt-sm="48" fxFlex="100">
+                                        <mat-form-field appearance="standard" class="form-field">
+                                            <mat-label><mat-icon class="mr"></mat-icon>&nbsp;</mat-label>
+                                            <input type="text" autocomplete="off" matInput class="form-control" name="name" ngModel>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="standard" class="form-field">
+                                            <mat-label><mat-icon class="mr"></mat-icon>&nbsp;</mat-label>
+                                            <input type="text" autocomplete="off" matInput placeholder="Apellido" class="form-control" name="lastName" ngModel>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="standard" class="form-field">
+                                            <mat-label><mat-icon class="mr"></mat-icon>&nbsp;</mat-label>
+                                            <input type="text" autocomplete="off" matInput placeholder="Teléfono" class="form-control" name="phone" ngModel>
+                                        </mat-form-field>
+                                    </div>
+                                    <div fxFlex.gt-sm="48" fxFlex="100">
+                                        <mat-form-field appearance="standard" class="form-field">
+                                            <mat-label><mat-icon class="mr"></mat-icon>&nbsp;</mat-label>
+                                            <input type="text" autocomplete="off" matInput placeholder="Dirección" class="form-control" name="location" ngModel>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="standard" class="form-field">
+                                            <mat-label><mat-icon class="mr"></mat-icon>&nbsp;</mat-label>
+                                            <input type="text" autocomplete="off" matInput placeholder="Email" class="form-control" name="email" ngModel>
+                                        </mat-form-field>  
+                                        <mat-form-field appearance="standard" class="form-field">
+                                            <mat-label><mat-icon class="mr"></mat-icon>&nbsp;</mat-label>
+                                            <input type="text" autocomplete="off" matInput placeholder="Usuario" class="form-control" name="userName" ngModel>
+                                        </mat-form-field>
+                                    </div>
+                                </form>
+                            </mat-tab>
+                            <mat-tab label="Referidos">
+                                <header><h2>Configuración sobre referidos</h2></header>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat nulla doloremque, culpa optio maxime perspiciatis velit repellat sint accusantium natus accusamus quia voluptas quibusdam dolorum cum, a, voluptatibus earum at.</p>
+                                <form novalidate 
+                                    fxLayout.gt-sm="row"
+                                    fxLayout="column" 
+                                    fxLayoutAlign="space-around center">
+                                    <div fxFlex.gt-sm="48" fxFlex="100">
+                                        <mat-form-field appearance="standard" class="form-field">
+                                            <mat-label><mat-icon class="mr"></mat-icon>&nbsp;</mat-label>
+                                            <input type="text" autocomplete="off" matInput class="form-control" name="name" ngModel>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="standard" class="form-field">
+                                            <mat-label><mat-icon class="mr"></mat-icon>&nbsp;</mat-label>
+                                            <input type="text" autocomplete="off" matInput placeholder="Apellido" class="form-control" name="lastName" ngModel>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="standard" class="form-field">
+                                            <mat-label><mat-icon class="mr"></mat-icon>&nbsp;</mat-label>
+                                            <input type="text" autocomplete="off" matInput placeholder="Teléfono" class="form-control" name="phone" ngModel>
+                                        </mat-form-field>
+                                    </div>
+                                    <div fxFlex.gt-sm="48" fxFlex="100">
+                                        <mat-form-field appearance="standard" class="form-field">
+                                            <mat-label><mat-icon class="mr"></mat-icon>&nbsp;</mat-label>
+                                            <input type="text" autocomplete="off" matInput placeholder="Dirección" class="form-control" name="location" ngModel>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="standard" class="form-field">
+                                            <mat-label><mat-icon class="mr"></mat-icon>&nbsp;</mat-label>
+                                            <input type="text" autocomplete="off" matInput placeholder="Email" class="form-control" name="email" ngModel>
+                                        </mat-form-field>  
+                                        <mat-form-field appearance="standard" class="form-field">
+                                            <mat-label><mat-icon class="mr"></mat-icon>&nbsp;</mat-label>
+                                            <input type="text" autocomplete="off" matInput placeholder="Usuario" class="form-control" name="userName" ngModel>
+                                        </mat-form-field>
+                                    </div>
+                                </form>
+                            </mat-tab>
+                            <mat-tab label="Configuración">
+                                <header><h2>Configuración general</h2></header>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat nulla doloremque, culpa optio maxime perspiciatis velit repellat sint accusantium natus accusamus quia voluptas quibusdam dolorum cum, a, voluptatibus earum at.</p>
+                                <form novalidate 
+                                    fxLayout.gt-sm="row"
+                                    fxLayout="column" 
+                                    fxLayoutAlign="space-around center">
+                                    <div fxFlex.gt-sm="48" fxFlex="100">
+                                        <mat-form-field appearance="standard" class="form-field">
+                                            <mat-label><mat-icon class="mr"></mat-icon>&nbsp;</mat-label>
+                                            <input type="text" autocomplete="off" matInput class="form-control" name="name" ngModel>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="standard" class="form-field">
+                                            <mat-label><mat-icon class="mr"></mat-icon>&nbsp;</mat-label>
+                                            <input type="text" autocomplete="off" matInput placeholder="Apellido" class="form-control" name="lastName" ngModel>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="standard" class="form-field">
+                                            <mat-label><mat-icon class="mr"></mat-icon>&nbsp;</mat-label>
+                                            <input type="text" autocomplete="off" matInput placeholder="Teléfono" class="form-control" name="phone" ngModel>
+                                        </mat-form-field>
+                                    </div>
+                                    <div fxFlex.gt-sm="48" fxFlex="100">
+                                        <mat-form-field appearance="standard" class="form-field">
+                                            <mat-label><mat-icon class="mr"></mat-icon>&nbsp;</mat-label>
+                                            <input type="text" autocomplete="off" matInput placeholder="Dirección" class="form-control" name="location" ngModel>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="standard" class="form-field">
+                                            <mat-label><mat-icon class="mr"></mat-icon>&nbsp;</mat-label>
+                                            <input type="text" autocomplete="off" matInput placeholder="Email" class="form-control" name="email" ngModel>
+                                        </mat-form-field>  
+                                        <mat-form-field appearance="standard" class="form-field">
+                                            <mat-label><mat-icon class="mr"></mat-icon>&nbsp;</mat-label>
+                                            <input type="text" autocomplete="off" matInput placeholder="Usuario" class="form-control" name="userName" ngModel>
+                                        </mat-form-field>
+                                    </div>
+                                </form>
+                            </mat-tab>
+                        </mat-tab-group>
+                    </div>                    
+                </div>
+            </mat-card-content>
+        </div>
+    </mat-card>
+</div>
+
+<!--<div>
+    <input type="file" (change)="fileEvent($event)">
+    <button mat-button color="primary" (click)="subirArchivo($event)">submit</button>
+</div> -->
