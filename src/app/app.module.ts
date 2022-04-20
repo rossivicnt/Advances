@@ -22,6 +22,7 @@ import { HeaderNavbarComponent } from './common/header-navbar/header-navbar.comp
 import { FooterComponent } from './common/footer/footer.component';
 import { FlexLayoutModule, FlexModule, GridModule } from '@angular/flex-layout';
 import { LoginRegisterComponent } from './login-register/login-register.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { LoginRegisterComponent } from './login-register/login-register.componen
     StoreComponent,
     HeaderNavbarComponent,
     FooterComponent,
-    LoginRegisterComponent
+    LoginRegisterComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
